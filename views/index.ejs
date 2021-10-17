@@ -1,13 +1,135 @@
+<!-- views/partials/index.ejs-->
+<!-- Viratkumar Khatri -->
+<!-- 301167228-->
+<!-- 10/16/2021-->
+
 <%- include partials/header.ejs %>
 
 <%- include partials/main_nav.ejs %>
-
-     
+ 
 
  <!-- Main Content-->
 <main class="container">
+     
   <div class="jumbotron">
-    <h1 class="display-4">Welcome to the <%= title %> page </h1>
+   
+  <% if (title == "Home") { %> 
+    <h1 class="display-4">Welcome to Virat Khatri's Express Portfolio Site</h1>
+    <p class="lead">Providing an excellent service for Web UI, API & Mobile Quality Assurance Automation </p>
+    <a class="btn btn-primary" href="/about">About Me</a>
+    <a  class="btn btn-primary" href="/projects">Projects</a>
+    <a  class="btn btn-primary" href="/services">Services</a>
+    <a  class="btn btn-primary" href="/contact">Contact Me</a>
+    <% } %>
+
+    <% if (title == "About"){ %> 
+      <h1 class="display-4">About Me</h1>
+      <img src="" style="float:left;">
+      <h4>Viratkumar Khatri</h4>
+      <p class="lead">To give short introduction, I am currently working fulltime with FordDirect, a US based automobile company, as Automation QA Engineer and also being part of Software Engineering Technician program in Centennial College. 
+        <br>7+ years of QA testing experience for projects around Web based application, TSYS/TS2 and Mobile NativeApp. Over 6 plus years of industry experience in Quality Engineering and Automation testing
+         </p>
+      <hr class="my-4">
+      <h3> To Know more about my IT career :</h3>
+      <a class="btn btn-primary btn-lg" href="/pub" role="button">CLICK HERE</a>
+      <% } %>
+    
+    <% if (title == "Projects"){ %> 
+          <div class="row">
+            <div class="col">
+              <h3>TANGERINE BANK</h3>
+              <p>Project – Line of Credit & Personal Loan Product launch
+                <br>Cloud Online Banking – Tangerine has introduced Line of Credit (LOC) & Personal Loan products online for their consumers.
+              </p>
+            </div>
+          <div class="col">
+            <img src="/assets/images/tangerine.jpg">
+          </div>
+          <div class="row">    
+          
+          <div class="col">
+            <h3>TD BANK</h3>
+            <p>Project – RESL HOJ Funding
+            <br>Salesforce Application (SFDC)- TD Bank has initiated innovative steps to migrate PEGA application to Saleforce CRM application for Mortgage & Home Equity Line of Credit products.
+            </p>
+          </div>          
+            <div class="col">
+              <img src="/assets/images/pro2.png">
+            </div>
+            &nbsp;
+            <div class="row">
+            <div class="col">
+                <h3>CIBC BANK </h3>
+                <p>Project – TSYS TS2
+                  <br>TSYS TS2 is an application which acts as the backbone for the credit card processing.TS2 is a credit card processing platform to maintain and process credit card and card holder’s information such as Customer Record and Account Record
+                </p>
+              </div>  
+            <div class="col">
+                <img src="/assets/images/Postman.jpg">
+            </div>
+        </div>
+        <% } %>
+
+    <% if (title == "Services"){ %> 
+
+          <div class="row">
+          <div class="col">
+            <img src="/assets/images/ser1.png">
+          </div>
+          <div class="col">
+            <h3>Selenium Web UI Automation</h3>
+          </div>
+          <div class="row">
+          <div class="col">
+            <img src="/assets/images/ser2.png">
+          </div>
+          <div class="col">
+            <h3>Postman API Automation</h3>
+          </div>
+          <div class="row">
+          <div class="col">
+            <img src="/assets/images/ser3.png">
+          </div>
+          <div class="col">
+            <h3>Mobile App Automation </h3>
+          </div>      
+          <% } %>
+
+<% if (title == "Contact"){ %> 
+    <form>
+      <div class="col-md-5 mb-3">
+        <label for="LastName">First name</label>
+        <input type="text" class="form-control" id="LastName"  required>
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="firstname">Last name</label>
+        <input type="text" class="form-control" id="firstname"  required>
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="Phnumber">Phone Number</label>
+        <input type="text" class="form-control" id="Phnumber" required>
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" required>
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" required></textarea>
+      </div>
+      <div class="col-md-5 mb-3">
+      <a class="btn btn-primary" href="/home" role="button">Submit</a>
+      </div>
+    </form>
+        <hr class="Address">
+          <h4>Contact Me:</h4>
+              <h5>1 Church Street</h5>
+              <h5>Toronto</h5>
+              <h5>M1M 1C1</h5>
+              <h5>contact.me@gmail.com
+
+        <% } %>
+
   </div>
 </main>
 

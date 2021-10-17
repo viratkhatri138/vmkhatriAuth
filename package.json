@@ -23,7 +23,9 @@
   },
   "description": "demo app for COMP229 Week3",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viratkhatri138/COMP229_F2021-Week3.git"
